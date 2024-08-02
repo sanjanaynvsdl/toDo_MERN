@@ -28,6 +28,10 @@ const TodoList = () => {
     await axios.delete(`http://localhost:5000/todos/${id}`);
     fetchTodos();
   };
+  const handleLogout = () => {
+    localStorage.removeItem('token'); // or session storage
+    window.location.href = '/login'; // Redirect to login page
+  };
 
   return (
     <div className="todo-list">
@@ -44,6 +48,7 @@ const TodoList = () => {
       {todos.map((todo) => (
         <TodoItem key={todo._id} todo={todo} onDelete={deleteTodo} />
       ))}
+      <button className="logout-button" onClick={handleLogout}>Logout</button>
     </div>
   );
 };

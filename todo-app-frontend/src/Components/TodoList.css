@@ -1,9 +1,15 @@
+body{
+  background-color: white;
+}
 .todo-list {
     background-color: #394558;
     padding: 20px;
     border-radius: 8px;
     width: 300px;
     text-align: left;
+    position: relative;
+    top: 15rem;
+    left:28rem;
   }
   
   .input-container {
@@ -22,7 +28,7 @@
   .input-container button {
     padding: 10px 15px;
     border: none;
-    background-color: #617c9a;
+    background-color: #1a2128;
     color: white;
     border-radius: 4px;
     cursor: pointer;
@@ -31,4 +37,26 @@
   .input-container button:hover {
     background-color: #556a87;
   }
+  
+.logout-button {
+  background-color: #cbd0d7; 
+  color: #1f3e61; 
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  left:5rem;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #b7c3d7; 
+}
+
+.logout-button:focus {
+  outline: none;
+}
+
   
